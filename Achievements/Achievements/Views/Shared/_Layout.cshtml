@@ -24,6 +24,8 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     @if (User.IsInRole("Admin"))
                     {
+                        
+                        <li>@Html.ActionLink("Search Students", "Index", "Profile")</li>
                         <li>@Html.ActionLink("AdminPanel", "AdminPanel", "Profile")</li>
                        
                     }
@@ -34,6 +36,7 @@
                     }
                     @if (User.IsInRole("Teacher"))
                     {
+                        <li>@Html.ActionLink("Search Students", "Index", "Profile")</li>
                         <li>@Html.ActionLink("TeacherPanel", "TeacherPanel", "Profile")</li>
                     }
 

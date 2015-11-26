@@ -15,9 +15,13 @@ namespace Achievements.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Profile
+        [Authorize(Roles="Teacher, Admin")]
         public ActionResult Index()
         {
-            
+            //Add all student profiles
+
+
+
             return View(db.Users.ToList());
         }
         
