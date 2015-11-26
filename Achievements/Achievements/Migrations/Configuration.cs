@@ -71,7 +71,7 @@ namespace Achievements.Migrations
               
                 var Student = new ApplicationUser
                 {
-                    UserName = "117097",
+                    UserName = "117097@horizoncollege.nl",
                     Name = "Raymond",
                     Prefix = "",
                     LastName = "Chang",
@@ -90,7 +90,7 @@ namespace Achievements.Migrations
          
                 var Teacher = new ApplicationUser
                 {
-                    UserName = "R0002",
+                    UserName = "Teacher@horizoncollege.nl",
                     Name = "Teacher",
                     Prefix = "",
                     LastName = "Teacher",
