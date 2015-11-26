@@ -241,9 +241,9 @@
     <Content Include="Views\Profile\Details.cshtml" />
     <Content Include="Views\Profile\Edit.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
-    <Content Include="Views\Panels\StudentPanel.cshtml" />
-    <Content Include="Views\Panels\TeacherPanel.cshtml" />
-    <Content Include="Views\Panels\AdminPanel.cshtml" />
+    <Content Include="Views\Profile\StudentPanel.cshtml" />
+    <Content Include="Views\Profile\TeacherPanel.cshtml" />
+    <Content Include="Views\Profile\AdminPanel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

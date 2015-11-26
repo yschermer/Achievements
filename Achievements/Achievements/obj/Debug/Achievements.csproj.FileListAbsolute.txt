@@ -66,3 +66,4 @@ C:\Users\Raymond\Documents\GitHub\Achievements\Achievements\Achievements\bin\Mic
 C:\Users\Raymond\Documents\GitHub\Achievements\Achievements\Achievements\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Raymond\Documents\GitHub\Achievements\Achievements\Achievements\obj\Debug\Achievements.dll
 C:\Users\Raymond\Documents\GitHub\Achievements\Achievements\Achievements\obj\Debug\Achievements.pdb
+C:\Users\Raymond\Documents\GitHub\Achievements\Achievements\Achievements\obj\Debug\Achievements.csprojResolveAssemblyReference.cache

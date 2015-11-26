@@ -24,17 +24,17 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     @if (User.IsInRole("Admin"))
                     {
-                        <li>@Html.ActionLink("AdminPanel", "Index", "Profile")</li>
-                        <li><a href="~/Views/Panels/AdminPanel.cshtml">AdminPanel</a></li>
+                        <li>@Html.ActionLink("AdminPanel", "AdminPanel", "Profile")</li>
+                       
                     }
                     @if (User.IsInRole("Student"))
                     {
-                        <li>@Html.ActionLink("StudentPanel", "Index", "Profile")</li>
+                        <li>@Html.ActionLink("StudentPanel", "StudentPanel", "Profile")</li>
 
                     }
                     @if (User.IsInRole("Teacher"))
                     {
-                        <li>@Html.ActionLink("TeacherPanel", "Index", "Profile")</li>
+                        <li>@Html.ActionLink("TeacherPanel", "TeacherPanel", "Profile")</li>
                     }
 
                     <li>@Html.ActionLink("About", "About", "Home")</li>

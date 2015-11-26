@@ -17,9 +17,29 @@ namespace Achievements.Controllers
         // GET: Profile
         public ActionResult Index()
         {
-
             
             return View(db.Users.ToList());
+        }
+        
+        [Authorize(Roles="Student")]
+        public ActionResult StudentPanel()
+        {
+
+            return View();
+        }
+
+        [Authorize(Roles="Teacher")]
+        public ActionResult TeacherPanel()
+        {
+
+            return View();
+        }
+
+        [Authorize(Roles="Admin")]
+        public ActionResult AdminPanel()
+        {
+
+            return View();
         }
 
         // GET: Profile/Details/5
@@ -38,6 +58,7 @@ namespace Achievements.Controllers
         }
 
         // GET: Profile/Create
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             return View();
@@ -48,6 +69,7 @@ namespace Achievements.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Create([Bind(Include = "Id,OVNumber,Name,Prefix,LastName,Gender,BirthDate,BirthCity,City,Job,StudyStartYear,Study,Email,EmailConfirmed,PasswordHash,SecurityStamp,PhoneNumber,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEndDateUtc,LockoutEnabled,AccessFailedCount,UserName")] ApplicationUser applicationUser)
         {
 
@@ -63,6 +85,7 @@ namespace Achievements.Controllers
         }
 
         // GET: Profile/Edit/5
+
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -94,6 +117,7 @@ namespace Achievements.Controllers
         }
 
         // GET: Profile/Delete/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(string id)
         {
             if (id == null)
@@ -109,6 +133,7 @@ namespace Achievements.Controllers
         }
 
         // POST: Profile/Delete/5
+        [Authorize(Roles = "Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
