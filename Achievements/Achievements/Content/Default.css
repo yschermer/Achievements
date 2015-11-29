@@ -1,0 +1,31 @@
+﻿body {
+    background-color:gray;
+}
+
+#profilesView{
+    float: right;
+    width: 70%;
+
+
+}
+#form0{
+    float: left;
+}
+
+footer{
+    float: left;
+}
+
+.container-fluid{
+
+    height: 310px;
+
+}
+
+.span2{
+    float: left;
+}
+
+.span8{
+    padding-left: 30%;
+}

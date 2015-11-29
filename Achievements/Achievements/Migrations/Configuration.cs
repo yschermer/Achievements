@@ -86,6 +86,53 @@ namespace Achievements.Migrations
                 manager.Create(Student, "Horizon!123");
 
 
+                var Student2 = new ApplicationUser
+                {
+                    UserName = "127064@horizoncollege.nl",
+                    Name = "Laura",
+                    Prefix = "van",
+                    LastName = "Dijk",
+                    Gender = GenderEnum.Vrouw,
+                    Email = "laura@hotmail.com",
+                    BirthDate = DateTime.Parse("01/06/1997"),
+                    City = "Rotterdam",
+                    Job = "Student",
+                    StudyStartYear = DateTime.Parse("01/07/2013"),
+                    Study = "Application and Media developer"
+                };
+                manager.Create(Student2, "Horizon!123");
+
+                var Student3 = new ApplicationUser
+                {
+                    UserName = "yoshio@horizoncollege.nl",
+                    Name = "Yoshio",
+                    Prefix = "",
+                    LastName = "Schermer",
+                    Gender = GenderEnum.Man,
+                    Email = "Yoshio@hotmail.com",
+                    BirthDate = DateTime.Parse("01/06/1995"),
+                    City = "NibbixWoud",
+                    Job = "Student",
+                    StudyStartYear = DateTime.Parse("01/07/2013"),
+                    Study = "Application and Media developer"
+                };
+                manager.Create(Student3, "Horizon!123");
+
+                var Student4 = new ApplicationUser
+                {
+                    UserName = "barry@horizoncollege.nl",
+                    Name = "Barry",
+                    Prefix = "",
+                    LastName = "Stavenuiter",
+                    Gender = GenderEnum.Man,
+                    Email = "barry@hotmail.com",
+                    BirthDate = DateTime.Parse("01/06/1995"),
+                    City = "Hoorn",
+                    Job = "Student",
+                    StudyStartYear = DateTime.Parse("01/07/2013"),
+                    Study = "Application and Media developer"
+                };
+                manager.Create(Student4, "Horizon!123");
                 //Teacher
          
                 var Teacher = new ApplicationUser
@@ -108,6 +155,9 @@ namespace Achievements.Migrations
 
                 manager.AddToRole(Admin.Id, "Admin");
                 manager.AddToRole(Student.Id, "Student");
+                manager.AddToRole(Student2.Id, "Student");
+                manager.AddToRole(Student3.Id, "Student");
+                manager.AddToRole(Student4.Id, "Student");
                 manager.AddToRole(Teacher.Id, "Teacher");
                 
             }

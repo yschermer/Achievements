@@ -1,21 +1,50 @@
-﻿
+﻿@model IEnumerable<Achievements.Models.ApplicationUser>
 @{
     ViewBag.Title = "TeacherPanel";
 }
-
+<link href="~/Content/Default.css" rel="stylesheet" />
+@section Scripts{
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    
+}
 <h2>TeacherPanel</h2>
 
 
 
-
-
-
-
-
-- Add Student account
+@*- Add Student account
 
 - Search Students account
 
 - Add Achievement
 
-- Add Results/status of Achievement
+- Add Results/status of Achievement*@
+
+
+@using (Ajax.BeginForm("AccountsView", "Profile", new AjaxOptions
+{
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "profilesField",
+    HttpMethod = "GET",
+
+    LoadingElementId = "busydiv"
+
+
+}))
+{
+
+    <p>
+        Search: @Html.TextBox("searchString")
+        <br />
+        Preference:@Html.DropDownList("Gender", EnumHelper.GetSelectList(typeof(Achievements.Models.GenderEnum)), "Select Gender", new { @class = "form-control" })
+        <br />
+        City: @Html.TextBox("City")
+        <input id="searchButton" type="submit" value="Go" style="width:70px" />
+    </p>
+
+}
+
+
+<div id="profilesField">
+    <div id="busydiv" style="display:none; width: 25px; height:25px;"><img src="~/Content/loading.gif" /></div>
+
+</div>
