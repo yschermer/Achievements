@@ -14,15 +14,66 @@ namespace Achievements.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+
+        [Authorize(Roles = "Admin")]
+        public ActionResult AdminsView(string searchString, string gender, string city)
+        {
+            var profiles = from f in db.Users
+                           select f;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                profiles = profiles.Where(s => s.Name.Contains(searchString));
+            }
+            if (!String.IsNullOrEmpty(gender))
+            {
+                GenderEnum newgender = (GenderEnum)Enum.Parse(typeof(GenderEnum), gender);
+
+                profiles = profiles.Where(a => a.Gender == newgender);
+            }
+            if (!String.IsNullOrEmpty(city))
+            {
+                profiles = profiles.Where(a => a.City == city);
+            }
+
+            return PartialView("_AccountsView", profiles);
+        }
+
+        //ActionResult voor Teachers, om Students op te zoeken.
+        [Authorize(Roles = "Teacher, Admin")]
+        public ActionResult AccountsView(string searchString, string gender, string city)
+        {
+            var profiles = from f in db.Users 
+                    where f.Job == "Student"
+                    select f;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                profiles = profiles.Where(s => s.Name.Contains(searchString));
+            }
+            if (!String.IsNullOrEmpty(gender))
+            {
+                GenderEnum newgender = (GenderEnum)Enum.Parse(typeof(GenderEnum), gender);
+
+                profiles = profiles.Where(a => a.Gender == newgender);
+            }
+            if (!String.IsNullOrEmpty(city))
+            {
+                profiles = profiles.Where(a => a.City == city);
+            }
+
+            return PartialView("_AccountsView", profiles);
+        }
+
         // GET: Profile
-        [Authorize(Roles="Teacher, Admin")]
+        //[Authorize(Roles="Teacher, Admin")]
         public ActionResult Index()
         {
             //Add all student profiles
 
 
 
-            return View(db.Users.ToList());
+            return View();
         }
         
         [Authorize(Roles="Student")]
