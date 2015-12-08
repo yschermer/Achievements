@@ -14,7 +14,29 @@ namespace Achievements.Models
         Man,
         Vrouw
     }
-    
+
+    public enum ClassEnum
+    {
+        M1A,
+        M1B,
+        M2A,
+        M2B,
+        M3A,
+        M3B,
+        M4A,
+        M4B,
+        H1A,
+        H1B,
+        H2A,
+        H2B,
+        H3A,
+        H3B,
+        H4A,
+        H4B,
+        H5A,
+        H5B
+    }
+
     public class ApplicationUser : IdentityUser
     {
        
@@ -34,7 +56,7 @@ namespace Achievements.Models
         public virtual string Job { get; set; }//Alleen Teachers en Admins!
         public virtual DateTime StudyStartYear { get; set; }//Alleen Students!
         public virtual string Study { get; set; }//Alleen Students!
-
+        public virtual ClassEnum Class { get; set; } //Alleen Teachers en Admins
    
         
 

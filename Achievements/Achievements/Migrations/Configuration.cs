@@ -43,7 +43,7 @@ namespace Achievements.Migrations
             //    manager.Create(role);
             //}
 
-
+            /*
             if (!context.Users.Any(u => u.UserName == "admin"))
             {
                 var store = new UserStore<ApplicationUser>(context);
@@ -81,7 +81,8 @@ namespace Achievements.Migrations
                     City = "Hoorn",
                     Job = "",
                     StudyStartYear = DateTime.Parse("01/07/2013"),
-                    Study = "Application and Media developer"
+                    Study = "Application and Media developer",
+                    Class = ClassEnum.M4B
                 };
                 manager.Create(Student, "Horizon!123");
 
@@ -98,7 +99,8 @@ namespace Achievements.Migrations
                     City = "Rotterdam",
                     Job = "Student",
                     StudyStartYear = DateTime.Parse("01/07/2013"),
-                    Study = "Application and Media developer"
+                    Study = "Application and Media developer",
+                    Class = ClassEnum.H3A
                 };
                 manager.Create(Student2, "Horizon!123");
 
@@ -114,7 +116,8 @@ namespace Achievements.Migrations
                     City = "NibbixWoud",
                     Job = "Student",
                     StudyStartYear = DateTime.Parse("01/07/2013"),
-                    Study = "Application and Media developer"
+                    Study = "Application and Media developer",
+                    Class = ClassEnum.H5A
                 };
                 manager.Create(Student3, "Horizon!123");
 
@@ -130,7 +133,8 @@ namespace Achievements.Migrations
                     City = "Hoorn",
                     Job = "Student",
                     StudyStartYear = DateTime.Parse("01/07/2013"),
-                    Study = "Application and Media developer"
+                    Study = "Application and Media developer",
+                    Class = ClassEnum.H2B
                 };
                 manager.Create(Student4, "Horizon!123");
                 //Teacher
@@ -160,7 +164,7 @@ namespace Achievements.Migrations
                 manager.AddToRole(Student4.Id, "Student");
                 manager.AddToRole(Teacher.Id, "Teacher");
                 
-            }
+            }*/
         }
     }
 }

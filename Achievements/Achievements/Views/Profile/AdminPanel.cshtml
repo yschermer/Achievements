@@ -8,6 +8,9 @@
 
 }
 
+@Html.ActionLink("Create New Account", "Create")
+
+
 @using (Ajax.BeginForm("AdminsView", "Profile", new AjaxOptions
 {
     InsertionMode = InsertionMode.Replace,
@@ -27,6 +30,8 @@
         <br />
         City: @Html.TextBox("City")
         <input id="searchButton" type="submit" value="Go" style="width:70px" />
+        <br />
+        Class: @Html.DropDownList("Class", EnumHelper.GetSelectList(typeof(Achievements.Models.ClassEnum)), "Select Class", new { @class = "form-control" })
     </p>
 
 }
