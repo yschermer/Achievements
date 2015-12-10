@@ -15,9 +15,9 @@ namespace Achievements.Helpers
         Student
     }
 
-    public class Users
-    {
-        public void CreateUserByRole(RoleEnum role, ApplicationUser user, string password)
+    public static class Users
+    {//CreateUserByRole(RoleEnum.Student, Application ser = new Application user, "password");
+        public static void CreateUserByRole(RoleEnum role, ApplicationUser user, string password)
         {
             user.Id = Guid.NewGuid().ToString();
 

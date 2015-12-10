@@ -113,7 +113,7 @@ namespace Achievements.Controllers
         }
 
         // GET: Profile/Create
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin, Teacher")]
         public ActionResult Create()
         {
             return View();
@@ -124,8 +124,8 @@ namespace Achievements.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Admin")]
-        public ActionResult Create([Bind(Include = "Id,OVNumber,Name,Prefix,LastName,Gender,BirthDate,BirthCity,City,Job,StudyStartYear,Study,Email,EmailConfirmed,PasswordHash,SecurityStamp,PhoneNumber,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEndDateUtc,LockoutEnabled,AccessFailedCount,UserName")] ApplicationUser applicationUser)
+        [Authorize(Roles = "Admin, Teacher")]
+        public ActionResult Create([Bind(Include = "Id,Name,Prefix,LastName,Gender,BirthDate,BirthCity,City,Job,StudyStartYear,Study,Email,EmailConfirmed,PasswordHash,SecurityStamp,PhoneNumber,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEndDateUtc,LockoutEnabled,AccessFailedCount,UserName")] ApplicationUser applicationUser)
         {
 
 
