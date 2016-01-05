@@ -81,6 +81,8 @@ namespace Achievements.Models
             return new ApplicationDbContext();
         }
 
+        public System.Data.Entity.DbSet<Achievements.Models.Achievement> Achievements { get; set; }
+
         //public System.Data.Entity.DbSet<Achievements.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
 }

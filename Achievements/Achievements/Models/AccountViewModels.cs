@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+
 
 namespace Achievements.Models
 {
@@ -62,8 +64,26 @@ namespace Achievements.Models
         public bool RememberMe { get; set; }
     }
 
+    
     public class RegisterViewModel
     {
+
+        public virtual string Name { get; set; }
+
+        public virtual string Prefix { get; set; }
+
+     
+        public virtual string LastName { get; set; }
+
+        public virtual GenderEnum Gender { get; set; }
+        public virtual DateTime BirthDate { get; set; }
+        public virtual string BirthCity { get; set; }
+        public virtual string City { get; set; }
+        public virtual string Job { get; set; }
+        public virtual DateTime StudyStartYear { get; set; }//Alleen Students!
+        public virtual string Study { get; set; }//Alleen Students!
+        public virtual ClassEnum Class { get; set; } //Students
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

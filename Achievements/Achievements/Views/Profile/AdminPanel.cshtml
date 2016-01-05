@@ -8,10 +8,10 @@
 
 }
 
-@Html.ActionLink("Create New Account", "Create")
+@*@Html.ActionLink("Create New Account", "Create")*@
+<a href="~/Views/Account/Register.cshtml">Create Account</a>
 
-
-@using (Ajax.BeginForm("AdminsView", "Profile", new AjaxOptions
+@using (Ajax.BeginForm("AccountsView", "Profile", new AjaxOptions
 {
     InsertionMode = InsertionMode.Replace,
     UpdateTargetId = "profilesField",

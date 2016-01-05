@@ -68,25 +68,25 @@ namespace Achievements.Migrations
                
               
                 //Student
-              
-                var Student = new ApplicationUser
-                {
-                    UserName = "117097@horizoncollege.nl",
-                    Name = "Raymond",
-                    Prefix = "",
-                    LastName = "Chang",
-                    Gender = GenderEnum.Man,
-                    Email = "raymondbdws@hotmail.com",
-                    BirthDate = DateTime.Parse("07/11/1995"),
-                    City = "Hoorn",
-                    Job = "",
-                    StudyStartYear = DateTime.Parse("01/07/2013"),
-                    Study = "Application and Media developer",
-                    Class = ClassEnum.M4B
-                };
-                manager.Create(Student, "Horizon!123");
+              */
+                //var Student = new ApplicationUser
+                //{
+                //    UserName = "117097@horizoncollege.nl",
+                //    Name = "Raymond",
+                //    Prefix = "",
+                //    LastName = "Chang",
+                //    Gender = GenderEnum.Man,
+                //    Email = "raymondbdws@hotmail.com",
+                //    BirthDate = DateTime.Parse("07/11/1995"),
+                //    City = "Hoorn",
+                //    Job = "",
+                //    StudyStartYear = DateTime.Parse("01/07/2013"),
+                //    Study = "Application and Media developer",
+                //    Class = ClassEnum.M4B
+                //};
+                //manager.Create(Student, "Horizon!123");
 
-
+            /*
                 var Student2 = new ApplicationUser
                 {
                     UserName = "127064@horizoncollege.nl",
