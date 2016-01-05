@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Achievements.Models.Achievement>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index for Teachers</h2>
+<form>
+    Search: @Html.TextBox("searchString") <br />
+    Status: @Html.DropDownList("achievementStatus", EnumHelper.GetSelectList(typeof(Achievements.Models.Achievement.statusEnum)), "Select Status", new { @class = "form-control" })
+    <br /><input id="searchButton" type="submit" value="Go" style="width:70px" />
+
+</form>
+<<<<<<< HEAD
+<!--teste-->
+=======
+<!--asdfasdfasdf--->
+>>>>>>> refs/remotes/origin/5-1-2016
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AchievementId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AchievementName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AchievementStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AchievementDescription)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AchievementId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AchievementName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AchievementStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AchievementDescription)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AchievementId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AchievementId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AchievementId })
+        </td>
+    </tr>
+}
+
+</table>

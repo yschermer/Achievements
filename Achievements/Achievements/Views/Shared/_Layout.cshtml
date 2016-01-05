@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Natschool V9.0</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -17,11 +17,31 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Natschool V9.0", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        
+                      
+                        <li>@Html.ActionLink("AdminPanel", "AdminPanel", "Profile")</li>
+                       
+                    }
+                    @if (User.IsInRole("Student"))
+                    {
+                        <li>@Html.ActionLink("StudentPanel", "StudentPanel", "Profile")</li>
+
+                    }
+                    @if (User.IsInRole("Teacher"))
+                    {
+                        
+                        <li>@Html.ActionLink("TeacherPanel", "TeacherPanel", "Profile")</li>
+                        <li>@Html.ActionLink("Achievements", "Index", "Achievements")</li>
+                    }
+
+                   
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
@@ -30,6 +50,9 @@
         </div>
     </div>
     <div class="container body-content">
+
+       
+        
         @RenderBody()
         <hr />
         <footer>
