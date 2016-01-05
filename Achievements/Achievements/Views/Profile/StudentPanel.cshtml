@@ -1,7 +1,44 @@
-﻿
+﻿@model IEnumerable<Achievements.Models.Achievement>
+
 @{
     ViewBag.Title = "StudentPanel";
 }
 
-<h2>StudentPanel</h2>
+<h2>Index</h2>
 
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AchievementName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AchievementStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AchievementDescription)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AchievementName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AchievementStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AchievementDescription)
+            </td>
+            <td>
+  
+                @Html.ActionLink("Details", "Details", new { Controller = "Achievements", id = item.AchievementId})
+      
+            </td>
+        </tr>
+    }
+
+</table>

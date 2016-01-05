@@ -9,7 +9,9 @@
 }
 <h2>TeacherPanel</h2>
 
-<a href="~/Views/Account/Register.cshtml">Create Account</a>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
 
 @*- Add Student account
 
@@ -38,9 +40,12 @@
         Gender: @Html.DropDownList("Gender", EnumHelper.GetSelectList(typeof(Achievements.Models.GenderEnum)), "Select Gender", new { @class = "form-control" })
         <br />
         City: @Html.TextBox("City")
+
+        <br />
+        Class: @Html.DropDownList("klas", EnumHelper.GetSelectList(typeof(Achievements.Models.ClassEnum)), "Select Class", new { @class = "form-control" })
         <input id="searchButton" type="submit" value="Go" style="width:70px" />
         <br />
-        Class: @Html.DropDownList("Class", EnumHelper.GetSelectList(typeof(Achievements.Models.ClassEnum)), "Select Class", new { @class = "form-control" })
+        
     </p>
 
 }
