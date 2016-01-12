@@ -4,6 +4,65 @@
     ViewBag.Title = "Index";
 }
 
+
+
+<div class="panel-background">
+    <div class="progress-content">
+        <div class="achievement-points vertical-center">
+            <img class="vertical-center" src="Content/logo3.png" style="width: 140px; height: 140px;"></img>
+            <div class="">
+                <div class="achievement-points-text">123 punten</div>
+            </div>
+            <!--Variable here-->
+        </div>
+        <div class="achievement-progress vertical-center">
+            <!--<div class="progress-recent">Recent accomplished<br /> achievement</div> (CSS RULE 114)-->
+            <div class="progress-bar vertical-center">
+                <div class="progressed-bar vertical-center">
+                </div>
+                <div class="progress-text">
+                    80% of 100% <!--Variable here-->
+                </div>
+            </div>
+            <!--<div class="progress-next">Next achievement <br /> or reward.</div> (CSS RULE 123)-->
+        </div>
+    </div>
+    <div class="achievement-categories">
+        <ul>
+            <!--START LOOP HERE (and use following markup in loop:)-->
+            <li>
+                <a href="#" class="category-plate">
+                    Overview
+                </a>
+            </li>
+            <!--END LOOP HERE-->
+        </ul>
+        <div class="search-block">
+            <form>
+                Search/Filter: @Html.TextBox("searchString", "", new { placeholder = "Deelnemer naam", @class = "search-string-input" } ) <input id="searchButton" type="submit" value="Go" style="width:70px" /> <br />
+                Status: @Html.DropDownList("achievementStatus", EnumHelper.GetSelectList(typeof(Achievements.Models.Achievement.statusEnum)), "Select Status", new { @class = "form-control achievement-status" })
+            </form>
+        </div>
+    </div>
+    <div class="available-achievements">
+        <!--START LOOP HERE (and use following markup in loop:)-->
+        @foreach (var item in Model)
+        {
+            <div class="achievement-block">
+                <div class="achievement-image-container">
+                </div>
+                <div class="achievement-description-box">
+                    <div class="description-text-container vertical-center">
+                        @Html.DisplayFor(modelItem => item.AchievementName)
+                    </div>
+                </div>
+            </div>
+        }
+        <!--END LOOP HERE-->
+    </div>
+</div>
+
+@*
 <h2>Index for Teachers</h2>
 <form>
     Search: @Html.TextBox("searchString") <br />
@@ -69,3 +128,4 @@
 }
 
 </table>
+*@

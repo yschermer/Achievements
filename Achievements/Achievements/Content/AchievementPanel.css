@@ -1,0 +1,376 @@
+﻿body
+{
+	background-color: rgba(187, 201, 221, 1.0);
+	margin: 0;
+	padding: 0;
+}
+
+body, a, h1, h2, h3, h4, h5, h6, td, th
+{
+	font-family: 'Open Sans', 'Lucida Grande', 'Lucida Sans', Arial, verdana, sans-serif;
+}
+
+/*TO DO: For responsive design, other styling should be used.*/
+
+
+@media screen and (max-width: 860px)
+{
+	body
+	{
+		display: none;
+	}
+}
+
+.vertical-center
+{
+    position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@media screen and (max-height: 850px)
+{
+    /*.panel-background.vertical-center
+    {
+        position: static;
+        top: auto;
+        transform: none;
+    }*/
+}
+
+.panel-background
+{
+	margin: 20px;
+	margin-top: -webkit-0px;
+	
+	padding-top: 1px;
+	border-radius: 5px;
+
+    /*background: -moz-linear-gradient(top,  #e4f5fc 0%, #bfe8f9 50%, #9fd8ef 51%, #2ab0ed 100%);*/ /* FF3.6-15 */
+    /*background: -webkit-linear-gradient(top,  #e4f5fc 0%,#bfe8f9 50%,#9fd8ef 51%,#2ab0ed 100%);*/ /* Chrome10-25,Safari5.1-6 */
+    /*background: linear-gradient(to bottom,  #e4f5fc 0%,#bfe8f9 50%,#9fd8ef 51%,#2ab0ed 100%);*/ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4f5fc', endColorstr='#2ab0ed',GradientType=0 );*/ /* IE6-9 */
+    
+    background: -moz-linear-gradient(top,  rgba(195,216,239,1) 0%, rgba(210,220,239,1.0) 35%, rgba(160,215,240, 0.7) 36%, rgba(160,215,240,1) 50%, rgba(155,210,230,0.7) 51%, rgba(100,210,230,1.0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(195,216,239,1) 0%, rgba(210,220,239,1.0) 35%, rgba(160,215,240, 0.7) 36%, rgba(160,215,240,1) 50%, rgba(155,210,230,0.7) 51%, rgba(100,210,230,1.0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(195,216,239,1) 0%, rgba(210,220,239,1.0) 35%, rgba(160,215,240, 0.7) 36%, rgba(160,215,240,1) 50%, rgba(155,210,230,0.7) 51%, rgba(100,210,230,1.0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    
+	height: 899px;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
+}
+
+
+.progress-content, .achievement-categories, .available-achievements, .login-form, .create
+{
+	background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+	border-radius: 2px;
+}
+
+.search-block
+{
+    text-align: center;
+}
+
+.search-block .achievement-status
+{
+    display: inline;
+    margin: 5px 0;
+}
+
+.search-block .search-string-input
+{
+    margin: 5px 0;
+}
+
+
+
+
+
+
+
+/*PROGRESS CONTENT WILL BE DISPLAYED FROM HERE*/
+.progress-content
+{
+	order: 1;
+	width: 100%;
+	height: 200px;
+	margin: 15px 15px 0 15px;
+	/*For eventually added elements and responsive design, flex is also being used here. */
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.achievement-points, .achievement-progress
+{
+	/*Vertical center elements*/
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+	height: 180px;
+}
+
+/*Achievement points display*/
+.achievement-points
+{
+	/*background-color: white;*/
+	width: 28%;
+}
+
+.achievement-points img
+{
+
+}
+
+.achievement-points-text
+{
+    margin-left: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/*Achievement progress bar display*/
+.achievement-progress
+{
+	width: 68%;
+	/*For eventually added elements and responsive design, flex is also being used here. */
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.progress-bar
+{
+	padding: 5px;
+	/*background-color: rgba(226, 154, 81, 1);*/
+	
+    background: rgba(41,41,41,1);
+    background: -moz-linear-gradient(top, rgba(41,41,41,1) 0%, rgba(176,176,176,1) 49%, rgba(171,171,171,1) 50%, rgba(41,41,41,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(41,41,41,1)), color-stop(49%, rgba(176,176,176,1)), color-stop(50%, rgba(171,171,171,1)), color-stop(100%, rgba(41,41,41,1)));
+    background: -webkit-linear-gradient(top, rgba(41,41,41,1) 0%, rgba(176,176,176,1) 49%, rgba(171,171,171,1) 50%, rgba(41,41,41,1) 100%);
+    background: -o-linear-gradient(top, rgba(41,41,41,1) 0%, rgba(176,176,176,1) 49%, rgba(171,171,171,1) 50%, rgba(41,41,41,1) 100%);
+    background: -ms-linear-gradient(top, rgba(41,41,41,1) 0%, rgba(176,176,176,1) 49%, rgba(171,171,171,1) 50%, rgba(41,41,41,1) 100%);
+    background: linear-gradient(to bottom, rgba(41,41,41,1) 0%, rgba(176,176,176,1) 49%, rgba(171,171,171,1) 50%, rgba(41,41,41,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#292929', endColorstr='#292929', GradientType=0 );
+	height: 20px;
+	width: 75%;
+	border-radius: 5px;
+    box-sizing: content-box;
+}
+
+.progress-text
+{
+	position: absolute;
+	width: 99%;
+	text-align: center;
+	bottom: 5px;
+}
+
+/*TO DO: Add javascript in order to make the progress bar dynamic*/
+.progressed-bar
+{
+	/*background-color: rgba(255, 174, 0, 1);*/
+    background: rgba(147,206,222,1);
+    background: -moz-linear-gradient(top, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(147,206,222,1)), color-stop(41%, rgba(117,189,209,1)), color-stop(100%, rgba(73,165,191,1)));
+    background: -webkit-linear-gradient(top, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+    background: -o-linear-gradient(top, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+    background: -ms-linear-gradient(top, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+    background: linear-gradient(to bottom, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf', GradientType=0 );
+	height: 20px;
+	width: 80%; /*Change property with javascript*/
+	text-align: center;
+	border-radius: 2px;
+}
+
+/* Eventually added features
+.progress-recent
+{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 50px;
+}
+
+.progress-next
+{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 50px;
+}
+*/
+
+
+
+
+
+
+
+/*Achievement categories and actual available achievements*/
+.achievement-categories, .available-achievements
+{
+	height: 650px;
+}
+
+.achievement-categories
+{
+	order: 2;
+	min-width: 27%;
+	margin-left: 15px;
+	overflow-y: scroll;
+}
+
+.achievement-categories ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.achievement-categories a
+{
+	color: rgba(0,0,0,1);
+	text-decoration: none;
+	display: block;
+}
+
+.achievement-categories a:visited
+{
+	color: rgba(0,0,0,1);
+}
+
+.achievement-categories .category-plate
+{
+	background: rgba(235,233,249,1);
+	background: -moz-linear-gradient(top, rgba(235,233,249,1) 0%, rgba(216,208,239,1) 50%, rgba(206,199,236,1) 51%, rgba(193,191,234,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(235,233,249,1)), color-stop(50%, rgba(216,208,239,1)), color-stop(51%, rgba(206,199,236,1)), color-stop(100%, rgba(193,191,234,1)));
+	background: -webkit-linear-gradient(top, rgba(235,233,249,1) 0%, rgba(216,208,239,1) 50%, rgba(206,199,236,1) 51%, rgba(193,191,234,1) 100%);
+	background: -o-linear-gradient(top, rgba(235,233,249,1) 0%, rgba(216,208,239,1) 50%, rgba(206,199,236,1) 51%, rgba(193,191,234,1) 100%);
+	background: -ms-linear-gradient(top, rgba(235,233,249,1) 0%, rgba(216,208,239,1) 50%, rgba(206,199,236,1) 51%, rgba(193,191,234,1) 100%);
+	background: linear-gradient(to bottom, rgba(235,233,249,1) 0%, rgba(216,208,239,1) 50%, rgba(206,199,236,1) 51%, rgba(193,191,234,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe9f9', endColorstr='#c1bfea', GradientType=0 );
+	padding: 15px 12px;
+	margin: 10px 10px 5px 10px;
+	border-radius: 2px;
+	text-align: center;
+    border: 1px solid rgba(200,200,200,1);
+}
+
+.available-achievements
+{
+	order: 3;
+	min-width: 68%;
+	margin-right: 15px;
+    overflow-y: scroll;
+}
+
+.achievement-block
+{
+    border: 1px solid rgba(159,216,239,1);
+    margin: 15px;
+    height: 185px;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.achievement-image-container
+{
+    width: 15%;
+    height: 155px;
+    margin: 15px 0;
+}
+
+.achievement-description-box
+{
+    width: 80%;
+    height: 155px;
+    margin: 15px 0;
+}
+
+.achievement-image-container, .achievement-description-box
+{
+    border: 1px solid rgba(159,216,239,1);
+}
+
+.description-text-container
+{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/*Login*/
+
+.login-form
+{
+    height: 99px;
+    padding: 100px 250px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.login-form a
+{
+    text-decoration: none;
+    color: rgba(130, 145, 255, 1.0);
+}
+
+.login-form input
+{
+    height: 30px;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    padding-left: 10px;
+}
+
+.login-form input:focus
+{
+    border-color: #358efb;
+}
+
+.login-form button
+{
+    background-color: rgba(130, 145, 255, 1.0);
+    border: none;
+    padding: 12px 0;
+    width: 100%;
+    display: inline-block;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/*Create*/
+
+.create
+{
+    height: 385px;
+    padding: 0 250px;
+    margin: 0 auto;
+    text-align: center;
+}
